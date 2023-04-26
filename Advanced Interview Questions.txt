@@ -1,0 +1,475 @@
+-------------------------------
+C#
+-------------------------------
+Threading vs. Tasks, lock,
+Garbage collection
+Assert vs. Debug
+is vs. as operator
+Null Coalesce operator
+
+events & delegates, multicast delegates
+
+swapping two numbers without using a third variable
+Palindrome string - check wheather an string is palindrome or not
+What happens when finally block throws an exception?
+
+-------------------------------
+Data Structures and Algorithms:
+-------------------------------
+Big O notation? Time and space complexity. Constant time O(1), linear time O(n), quadratic time O(n2), 
+Exponential Time O(2^n), logarithm time O(log n)
+What are infix, prefix, and postfix in data structure? (expressions)
+How would you implement a queue using a stack?
+Name some applications of data structures?
+
+how does dynamic memory allocation will help you in managing data?
+Heap vs. Stack?
+A linked list is considered as a linear or non-linear data structure?
+what is merge sort and how it is useful?
+how does a variable declaration activity will consume or affect the memory allocation?
+
+the dynamic data structure?
+the minimum number of queues that are needed to implement a priority queue?
+
+SORTING ALGORITHMS:
+
+Quicksort: 1. pivot element, partiotion into two, left array elements <= pivot, right array elements > pivot
+		2. Recursively, sort two subarrays with Quicksort.
+		3. Combine sorted arrays.
+
+Bubble sort: keep swapping elements until sorted, multiple iterations, poor performance, quadratic time O(n2)
+Bucket sort: O(n+k), O(n2), create buckets of different ranges, place elements into relevant buckets, sort each bucket
+		concatenate all sorted buckets
+Comb sort: an improved version of bubble sort, gap value > 1, shrink in gap value is 1.3
+Radix sort: linear sorting algorithm, 
+		non-comparative sorting algorithm that is better than the comparative sorting algorithms.
+		It has linear time complexity that is better than the comparative algorithms with complexity O(n logn).
+Merge sort: divide list into 2 halves, keep dividing untill can't be divided, merge two elements in sorted order
+		keep merging untill all are merged and sorted.
+Insertion sort: O(n2), poor performance, keep inserting elements in their sorted order
+Heap sort: time - O(n logn), space O(1), create Heap, convert it to Max Heap, now root element is biggest therefore 
+		remove root element and store it in its sorted position, keep repeating these steps untill sorted
+Balloon sort:
+
+difference between an array and a linked list?
+
+Types of trees.
+General Tree - can have many child nodes
+Binary Tree - can only have maximum two child nodes 
+Forests
+Expression Tree
+Binary Search Tree
+Tournament Tree
+AVL Tree - self balancing BST
+
+Which data structures do you use in DFS and BFS algorithms? 
+Breadth First & Depth First - Graph traversal - time complexity O(V+E)
+
+Trees are also called recursive data structures
+
+
+
+-------------------------------
+Javascript:
+-------------------------------
+https://www.toptal.com/jquery/interview-questions
+
+this keyword: In regular functions "this" keyword represented the object that called the function, 
+					which could be the window, the document, a button or whatever.
+
+		With arrow functions, "this" keyword always represents the object that defined the arrow function.
+
+In an object method, this refers to the object.
+Alone, this refers to the global object.
+In a function, this refers to the global object.
+In a function, in strict mode, this is undefined.
+In an event, this refers to the element that received the event.
+Methods like call(), apply(), and bind() can refer this to any object.
+
+this vs $(this)
+Asynchronous JavaScript (callbacks, promises, async/await)
+Closures
+The event loop
+Recursion
+Scope
+Hoisting: JavaScript's default behavior of moving all declarations to the top of the current scope
+		JavaScript only hoists declarations, not initializations.
+
+Prototypical inheritance
+bind(), call(), apply()
+reduce()
+Generators
+fetch() vs. axios
+Strict Mode: ECMAScript version 5, can't use undeclared variables
+		"use strict";
+		x = 3.14;       // This will cause an error because x is not declared
+
+Ecmascript 6
+--------------
+Classes: super() - calls base class constructor, extends to inherit
+Arrow Functions: 
+
+Variables: var, let, const
+
+Var: var has a function scope, not a block scope.
+	If you use var outside of a function, it belongs to the global scope.
+	If you use var inside of a function, it belongs to that function.
+	If you use var inside of a block, i.e. a for loop, the variable is still available outside of that block.
+	
+let & const: both has a block scope.
+	let is the block scoped version of var, and is limited to the block (or expression) where it is defined.
+	If you use let inside of a block, i.e. a for loop, the variable is only available inside of that loop.
+
+The keyword const is a bit misleading. It does not define a constant value. It defines a constant reference to a value.
+
+Because of this you can NOT:
+
+Reassign a constant value
+Reassign a constant array
+Reassign a constant object
+
+But you CAN:
+
+Change the elements of constant array
+Change the properties of constant object
+
+Array Methods: map() - const myArray = ['apple', 'banana', 'orange'];
+				const myList = myArray.map((item) => <p>{item}</p>)
+Destructuring: extract only what is needed from arrays or objects:
+			const vehicles = ['mustang', 'f-150', 'expedition'];
+			const [car, truck, suv] = vehicles;
+
+Spread ... Operator: copy all or part of an existing array or object into another array or object.
+			const numbersOne = [1, 2, 3];
+			const numbersTwo = [4, 5, 6];
+			const numbersCombined = [...numbersOne, ...numbersTwo];
+
+Modules: allows to break up your code into separate files.
+	Export: can export a function or variable from any file. Two types of exports: Named and Default.
+	NAMED EXPORTS:	
+		export const name = "Jesse"
+		export const age = 40
+	OR
+		const name = "Jesse"
+		const age = 40
+		export { name, age }
+
+		import { name, age } from "./person.js";
+	DEFAULT EXPORTS: there can be only one default export per file.
+		const message = () => {
+  		const name = "Jesse";
+  		const age = 40;
+  		return name + ' is ' + age + 'years old.';
+		};
+
+		export default message;
+
+		import message from "./message.js";
+
+Ternary operator: authenticated ? renderApp() : renderLogin();
+
+For/of
+Map Objects
+Set Objects
+Promises
+Symbol
+Default Parameters
+Function Rest Parameter
+String.includes()
+String.startsWith()
+String.endsWith()
+Array.from()
+Array keys()
+Array find()
+Array findIndex()
+New Math Methods
+New Number Properties
+New Number Methods
+New Global Methods
+Object entries
+JavaScript Modules
+
+Rest Syntax
+Array Methods: map, filter, reduce, find, findIndex, IndecOf, push, pop, shift, unshift, splice, slice, sort
+Identity Operator (===) vs. Equality Operator (==)
+Object Comparison
+
+-------------------------------
+Software Architecture:
+-------------------------------
+Clean/Onion/Domain driven Architecture
+MVC
+MVVM, MVP
+MVC + MVVM/MVP
+CQRS - Command Query Request segregation
+Microservices: REST APIs, API Gateway, Token based authentication, Messaging (RabbitMQ, gRPC, tRPC)
+Monolithic application
+Containers & Container Orchestration e.g. Docker & Kubernetes
+Repository Pattern - Generic Repository
+Ntier architecture
+Microkernel architecture
+Event driven
+Test driven
+
+Blackboard
+Client-server (2-tier, 3-tier, n-tier, cloud computing exhibit this style)
+Component-based
+Data-centric
+Event-driven (or implicit invocation)
+Layered (or multilayered architecture)
+Peer-to-peer (P2P)
+Pipes and filters
+Plug-ins
+Reactive architecture
+Representational state transfer (REST)
+Rule-based
+Service-oriented
+Shared nothing architecture
+Space-based architecture
+
+-------------------------------
+Web APIs:
+-------------------------------
+REST vs. RESTFul vs. SOAP
+Web APIs vs. WCF vs. gRPC
+microservices: API Gateway, internal messaging
+media type formatters: application/json or text/json, application/xml, application/x-www-form-urlencoded
+
+HTTP Status Codes categorized:
+1xx (Informational)
+2xx (Successful)
+3xx (Redirection) 
+4xx (Client Error)
+5xx (Server Error)
+
+Status Codes:
+Status code 200 – request is ok.
+Status code 201 – Created 
+Status code 202 – Accepted 
+Status code 204 – No content 
+Status code 301 – Moved permanently 
+Status code 400 – Bad request 
+Status code 401 – Unauthorized 
+Status code 403 – Forbidden 
+Status code 404 – Not found 
+Status code 500 – Internal server error 
+Status code 502 – Bad gateway 
+Status code 503 – Service Unavailable 
+
+Web API filters
+use of DelegatingHandler
+Two ways to pass multiple complex types in Web API include – Newtonsoft array and using ArrayList. 
+How to unit test Web API?
+Web API uses which library for JSON serialization?
+What is content negotiation in ASP.Net Web API?
+What are Exception filters in ASP.NET Web API?
+HOW to secure ASP.NET Web API?
+What is ASP.NET Web API routing?
+What are the main return types supported in ASP. Net Web API? 
+HttpResponseMessage, IHttpActionResult, Void, Other types such as string, int, etc.
+What are new features used in ASP.NET Web API 2.0
+Attribute Routing, CORS (Cross-Origin Resource Sharing), OWIN (Open Web Interface for .NET) self-hosting
+IHttpActionResult, Web API OData
+
+What is HttpConfiguration in Web API?
+ParameterBindingRules
+Formatters
+MessageHandlers
+DependencyResolver 
+Services
+
+What are the different HTTP methods used in Web API? GET, PUT, POST, DELETE, PATCH
+-------------------------------
+Web APIs Security:
+-------------------------------
+OAuth and SSO
+JWT
+
+
+-------------------------------
+MVC:
+-------------------------------
+Routing in ASP.NET MVC
+Model-View-Controller (MVC) architecture and its advantages.
+Action Filters and Authorization Filters
+Model Binding and Validation in ASP.NET MVC
+Areas and Partial Views in ASP.NET MVC.
+AJAX and JSON with ASP.NET MVC
+Caching in ASP.NET MVC, including Output Caching and Data Caching.
+Dependency Injection and IoC in ASP.NET MVC
+Unit Testing in ASP.NET MVC
+Razor View Engine and Templated Razor Views
+Security in ASP.NET MVC (e.g. Cross-Site Request Forgery (CSRF), Cross-Site Scripting (XSS), etc.)
+Exception Handling and Logging in ASP.NET MVC.
+
+
+Model-View-Controller (MVC) Architecture: the structure and purpose of the MVC architecture in ASP.NET.
+
+Routing: how URL routing works in ASP.NET MVC, including route constraints and custom route definitions.
+
+Dependency Injection: how to use dependency injection in ASP.NET MVC, and the benefits it provides.
+
+Action Filters:  how action filters can be used to modify or manipulate the behavior of an action method.
+
+Model Binding: how to bind data from incoming HTTP requests to action method parameters, and how to use model binding to validate user input.
+
+Razor View Engine: the Razor syntax and how to create dynamic HTML pages using Razor views.
+
+View Components: how to create reusable components that can be used throughout an application.
+
+Areas: how to organize a large MVC application into smaller, more manageable units using areas.
+
+Asynchronous Programming: how to use asynchronous programming in ASP.NET MVC to improve application performance.
+
+Security: the security features built into ASP.NET MVC, including authentication and authorization, and how to use these features to protect your application from potential threats.
+
+
+-------------------------------
+Kendo UI:
+-------------------------------
+Kendo Grid with all features: template columns
+CRUD: inline, Popup
+CRUD: Providing APIs links directly to
+Nested Grid
+Grouping
+Styling
+Virtualization - Lazy loading
+Drag and Drop
+Dialog
+
+1. What are some most popular JavaScript frameworks?
+2. How do you implement data binding in Kendo UI?
+3. Can you explain the MVVM architecture of Kendo UI?
+4. What’s your experience with using templates in Kendo UI?
+5. What is a Grid widget in Kendo UI?
+6. What is an Autocomplete widget and what are its benefits?
+7. Kendo Grid: sorting, paging, lazy loading, filtering, grouping, editing (inline, popup)
+8. What does data-role mean in HTML markup in context with Kendo UI?
+9. examples of some real world applications built on top of Kendo UI?
+10. advantages of using Kendo UI over other platforms like ReactJS or AngularJS?
+11. limitations of Kendo UI when compared to other frontend frameworks like Bootstrap or Material Design Lite?
+12. What are jQuery Templates?
+13. What is “kendo” namespace in Javascript?
+14. What are the main components provided by Kendo UI framework?
+15. Does Sencha Touch provide any widgets for mobile development similar to those available in Kendo UI?
+16. What is the difference between ASP MVC and JSP?
+17. What is Bower?
+18. What is Gulp?
+19. What are Grunt and RequireJS used for?
+20. What is Knockout JS?
+
+-------------------------------
+ReactJS:
+-------------------------------
+Create React App - Vite
+React ES6
+React Render HTML
+React JSX
+React Components
+React Class
+React Props
+React Events
+React Conditionals
+React Lists
+React Forms
+React Router
+React Memo
+React CSS Styling
+React Sass Styling
+
+React Hooks
+What is a Hook?
+useState
+useEffect
+useContext
+useRef
+useReducer
+useCallback
+useMemo
+Custom Hooks
+
+-------------------------------
+Angular:
+-------------------------------
+
+
+-------------------------------
+SQL:
+-------------------------------
+join vs. cross join vs. outer join vs. full outer join vs. left join vs. left outer join etc.
+2nd or 3rd highest salary
+RowNumber() vs. Rank()
+
+-------------------------------
+Cloud Computing: (Azure, AWS)
+-------------------------------
+
+-------------------------------
+JQuery
+-------------------------------
+https://www.toptal.com/jquery/interview-questions
+
+1. Explain what the following code will do:
+
+$( "div#first, div.first, ol#items > [name$='first']" )
+
+
+3. What selector would I use to query for all elements with an ID that ends with a particular string? Also, 
+how would I modify the selector to retrieve only <div> elements whose IDs end with that same string? Provide an example.
+
+What’s the deal with the $ in jQuery? What is it and what does it mean?
+
+4. Also, how can jQuery be used in conjunction with another JavaScript library that also uses $ for naming? 
+Bonus credit if you can provide two answers.
+
+6. What is method chaining in jQuery? Provide an example. What advantages does it offer?
+
+7. Explain what the following code does:
+
+$( "div" ).css( "width", "300px" ).add( "p" ).css( "background-color", "blue" );
+
+8. What is the difference between jQuery.get() and jQuery.ajax()?
+
+9. Which of the two lines of code below is more efficient? Explain your answer.
+
+document.getElementById( "logo" );
+or
+
+$( "#logo" );
+
+10. Explain and contrast the usage of event.preventDefault() and event.stopPropagation(). Provide an example.
+
+11. What is accomplished by returning false from (a) a jQuery event handler, (b) a regular JavaScript onclick 
+event handler for an anchor tag, and (c) a regular JavaScript onclick event handler for 
+a non-anchor tag (e.g., a div, button, etc.)?
+
+14. What is the proper way in jQuery to remove an element from the DOM before its Promise is resolved?
+
+15. Explain the difference between the .detach() and .remove() methods in jQuery.
+
+16. What’s the difference between document.ready() and window.onload()?
+
+17. What’s the difference between prop() and attr()?
+
+--------------
+Node JS
+--------------
+1. JS is single threaded language, node js is written in JS. How can we acheive multi threading in Node JS?
+
+2. What is V8 engine? is written by google and chrome uses it to execute javascript. Node js also uses V8 engine.
+
+3. Event loop in JS? it allows JS to perform non blocking IO operations
+
+4. What are callbacks in node js? these are functions passed to other functions to run after completion of a particular
+	task.
+5. What is callback hell? the problem arised by calling a lot of callbacks. async/await and generators with promises
+	are the latest solutions to callback hell.
+6. What frameworks have you used with Node js? express js, nest js
+7. Whats the diff b/w express and nest js? 
+8. What is dependency injection?
+9. Streaming in node js? 
+
+
+
+
+
